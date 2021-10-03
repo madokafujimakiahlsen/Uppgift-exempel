@@ -17,7 +17,7 @@
 const movieList = [
     {
         title: "My shoes",
-        genre: 'dorama',
+        genre: 'Drama',
         year: 2005,
         review: 4 + "/" + 5
     },
@@ -60,17 +60,21 @@ function SaveInSessionStorage() {
     
     // set data in session strage
     window.sessionStorage.setItem(title, JSON.stringify({ title, genre, year, review }));
-    
-    // get data from session strage
-    const obj = JSON.parse(window.sessionStorage.getItem(title));
+    addNewMovieToTable(title);
+}
 
-    console.log(obj);
 
-    let row = table.insertRow(1); 
-    row.insertCell(0).innerHTML = obj.title; 
-    row.insertCell(1).innerHTML = obj.genre; 
-    row.insertCell(2).innerHTML = obj.year;   
-    row.insertCell(3).innerHTML = obj.review + "/" + 5; 
+function addNewMovieToTable(title) {
+  // get data from session strage
+  const movie = JSON.parse(window.sessionStorage.getItem(title));
+
+  console.log(movie);
+
+  let row = table.insertRow(1);
+  row.insertCell(0).innerHTML = movie.title;
+  row.insertCell(1).innerHTML = movie.genre;
+  row.insertCell(2).innerHTML = movie.year;
+  row.insertCell(3).innerHTML = movie.review + "/" + 5;
 }
 
 // ################ ayako - end ################
