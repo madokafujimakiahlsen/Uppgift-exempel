@@ -52,10 +52,7 @@ row2.insertCell(3).innerHTML = movieList[1].review; //10/10
 const button = document.getElementById("button");
 button.addEventListener("click", SaveInSessionStorage);
 
-let counter = 0;
-
 function SaveInSessionStorage() {
-    let num = counter + 1;
     const title = document.getElementById("title").value;
     const genre = document.getElementById("genre").value;
     const year = document.getElementById("year").value;
