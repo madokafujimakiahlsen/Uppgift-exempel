@@ -35,7 +35,7 @@ var table = document.getElementById("myTable");
 var row1 = table.insertRow(1); // the second row (under headlines)
 // insert cells to the row
 row1.insertCell(0).innerHTML = movieList[0].title; //My shoes
-row1.insertCell(1).innerHTML = movieList[0].genre; //dorama
+row1.insertCell(1).innerHTML = movieList[0].genre; //drama
 row1.insertCell(2).innerHTML = movieList[0].year;  //2005
 row1.insertCell(3).innerHTML = movieList[0].review; //5/10
 
